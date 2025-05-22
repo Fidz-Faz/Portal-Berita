@@ -89,7 +89,7 @@ class FrontController extends Controller
         $query->where('name', 'Automotive')
         ->where('is_featured', 'featured');
     })
-    ->inRandomOrder()
+    ->inRandomOrder() 
     ->first();
 
         

@@ -194,8 +194,7 @@
 							<p class="text-white">Featured</p>
 							<a href="details.html" class="font-bold text-[30px] leading-[36px] text-white hover:underline 
 							transition-all duration-300">{{$entertainment_featured_articles->name}}</a>
-							<p class="text-white">$entertainment_featured_articles->format('M d, Y')</p>
-						</div>
+							<p class="text-white">{{ $entertainment_featured_articles->created_at->format('M d, Y') ?? 'N/A' }}</p>						</div>
 					</div>
 				</div>
 				<div class="h-[424px] w-fit px-5 overflow-y-scroll overflow-x-hidden relative custom-scrollbar">
@@ -297,13 +296,14 @@
 						<div class="flex flex-col gap-[10px]">
 							<p class="text-white">Featured</p>
 							<a href="details.html" class="font-bold text-[30px] leading-[36px] text-white hover:underline transition-all duration-300">
-							@if($automotive_featured_articles)
+							{{$automotive_featured_articles->name}}
+							<!-- @if($automotive_featured_articles)
                                {{ $automotive_featured_articles->name }}
                                @else
                                <em>Automotive</em>
-                            @endif
+                            @endif -->
 							</a>
-							<p class="text-white">{{ $automotive_featured_articles->created_at->format('M d, Y') }}</p>
+							<p class="text-white">{{$automotive_featured_articles->created_at->format('M d, Y') }}</p>
 						</div>
 					</div>
 				</div>
